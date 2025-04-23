@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSketch AI - Virtual Painter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Virtual Painter</h1>
+        
+        <div class="header">
+            <div class="color-option" id="purple" style="background-color: #ff00ff;"></div>
+            <div class="color-option" id="blue" style="background-color:rgb(89, 0, 255);"></div>
+            <div class="color-option" id="green" style="background-color: #00ff00;"></div>
+            <div class="color-option" id="eraser" style="background-color: #000000;"></div>
+        </div>
+        
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Virtual Painter">
+        </div>
+        
+        <div class="instructions">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>Angkat 2 jari untuk memilih warna atau penghapus(warna hitam)</li>
+                <li>Angkat 1 jari untuk mulai mengambar</li>
+                <li>Angkat tangan kiri untuk menghapus semua</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
